@@ -11,7 +11,7 @@ out_image = np.zeros(size)
 for _ in range(10):
     position = random_point(size)
     radius = random_radius(size)
-    linear_square(out_image, size, position, radius)
+    stars(out_image, size, position, radius)
 
 imgplot = plt.imshow(out_image, cmap='gray',vmin=0,vmax=255)
 

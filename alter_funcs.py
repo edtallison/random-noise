@@ -43,8 +43,11 @@ def linear_square(image, size, position, rad):
     bound_t = max(0, y - rad)
     bound_b = min(height, y + rad)
 
-    for i in range(rad):
+    image[y, x] += 10*rad
+
+    for i in range(1, rad):
         dist_amount = 10*(rad-i)
+        
         if x+i < bound_r:
             image[y, x+i] += dist_amount
         if x-i > bound_l:
@@ -52,6 +55,4 @@ def linear_square(image, size, position, rad):
         if y+i < bound_b:
             image[y+i, x] += dist_amount
         if y-i > bound_t:
-            image[y-i, x] += dist_amount
-
-        
+            image[y-i, x] += dist_amount    
