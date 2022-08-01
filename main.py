@@ -1,15 +1,22 @@
+from cgi import test
 import matplotlib.pyplot as plt
-import matplotlib.image as mpimg
 import numpy as np
+from functions import *
 
-test_image = np.zeros((50,50))
+WIDTH = 50
+HEIGHT = 50
 
-for i in range(len(test_image)):
-    for j in range(len(test_image[i])):
-        test_image[i,j] += (i+j)
+# note (0,0) is top left of image
+out_image = np.zeros((HEIGHT,WIDTH))
 
-imgplot = plt.imshow(test_image)
+test_point = random_point(out_image)
+print(test_point)
+out_image[test_point] = 255
 
-print(test_image)
+imgplot = plt.imshow(out_image, cmap='gray',vmin=0,vmax=255)
 
-plt.show()
+if __name__ == "__main__":
+    # print the matrix of numbers that make up the image
+    print(out_image)
+    # show the image
+    plt.show()
