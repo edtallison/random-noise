@@ -9,9 +9,10 @@ HEIGHT = 50
 # note (0,0) is top left of image
 out_image = np.zeros((HEIGHT,WIDTH))
 
-test_point = random_point(out_image)
-print(test_point)
-out_image[test_point] = 255
+for _ in range(5):
+    test_point = random_point(out_image)
+    print(test_point)
+    out_image[test_point] = 255
 
 imgplot = plt.imshow(out_image, cmap='gray',vmin=0,vmax=255)
 
