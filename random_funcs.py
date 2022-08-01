@@ -1,9 +1,8 @@
 import numpy.random as random
 
-def random_point(image):
+def random_point(size):
 
-    height = len(image)
-    width = len(image[0])
+    height, width = size
 
     y = random.random_integers(0, height)
     x = random.random_integers(0, width)
@@ -12,15 +11,13 @@ def random_point(image):
 
     return position
 
-def random_size(image):
-    # size measured as radius in pixels
+def random_radius(size):
 
-    height = len(image)
-    width = len(image[0])
+    height, width = size
 
-    max_size = int(min(height, width) / 2)
-    min_size = 5
+    max_radius = int(min(height, width) / 2)
+    min_radius = 5
 
-    size = random.random_integers(min_size, max_size)
+    size = random.random_integers(min_radius, max_radius)
 
     return size

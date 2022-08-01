@@ -3,16 +3,15 @@ import numpy as np
 from random_funcs import *
 from alter_funcs import *
 
-WIDTH = 50
-HEIGHT = 50
+SIZE = (50, 50)
 
 # note (0,0) is top left of image
-out_image = np.zeros((HEIGHT,WIDTH))
+out_image = np.zeros(SIZE)
 
 for _ in range(5):
-    position = random_point(out_image)
-    size = random_size(out_image)
-    linear_square(out_image, position, size)
+    position = random_point(SIZE)
+    radius = random_radius(SIZE)
+    linear_square(out_image, position, radius)
 
 imgplot = plt.imshow(out_image, cmap='gray',vmin=0,vmax=255)
 
