@@ -15,7 +15,7 @@ def random_radius(size):
 
     height, width = size
 
-    max_radius = int(min(height, width) / 2)
+    max_radius = int(min(height, width) / 4)
     min_radius = 5
 
     size = random.random_integers(min_radius, max_radius)
