@@ -1,7 +1,7 @@
 import numpy.random as random
 
 def random_point(image):
-    
+
     height = len(image)
     width = len(image[0])
 
@@ -9,3 +9,6 @@ def random_point(image):
     x = random.random_integers(0, width)
 
     return (y, x)
+
+def random_size(image):
+    pass

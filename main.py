@@ -1,7 +1,6 @@
-from cgi import test
 import matplotlib.pyplot as plt
 import numpy as np
-from functions import *
+from random_funcs import *
 
 WIDTH = 50
 HEIGHT = 50
